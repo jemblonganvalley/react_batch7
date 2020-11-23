@@ -1,0 +1,10 @@
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  padding: 0 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: black;
+  color: whitesmoke;
+}
