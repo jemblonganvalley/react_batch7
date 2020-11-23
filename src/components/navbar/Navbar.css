@@ -7,4 +7,19 @@
   align-items: center;
   background-color: black;
   color: whitesmoke;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 150;
+}
+
+.menu {
+  margin-left: auto;
+  cursor: pointer;
+  user-select: none;
+}
+
+.arrow {
+  cursor: pointer;
+  user-select: none;
 }
