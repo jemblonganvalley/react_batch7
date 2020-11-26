@@ -1,36 +1,59 @@
 import "./App.css";
-import React from "react";
-import Container from "./components/container/Container";
-import ConCard from "./components/containerCard/ConCard";
-import Navbar from "./components/navbar/Navbar";
+import React, { useState } from "react";
+import Home from "./components/pages/home/Home";
 
 //KELAS MALAM
 const App = () => {
+  const [page, setPage] = useState("about");
+
+  const PageSwitcher = () => {
+    switch (page) {
+      case "home":
+        return <Home />;
+      case "about":
+        return <h1>INI ABOUT</h1>;
+      case "contact":
+        return <h1>INI CONTACT</h1>;
+      default:
+        return <h1>404 not found</h1>;
+    }
+  };
+
   return (
-    <>
-      <Navbar />
-
-      <main className="App" style={{ marginTop: "10vh" }}>
-        <Container
-          title="Title Satu"
-          body="ini adalah isi container satu"
-          // bgImage="https://picsum.photos/seed/150/600"
-          bgColor="yellow"
+    <main className="App" style={{ marginTop: "10vh" }}>
+      <div className="menu">
+        <button
+          onClick={() => {
+            setPage("home");
+          }}
         >
-          <img src="https://picsum.photos/seed/13/200" alt="" />
+          home
+        </button>
+        <button
+          onClick={() => {
+            setPage("about");
+          }}
+        >
+          about
+        </button>
+        <button
+          onClick={() => {
+            setPage("contact");
+          }}
+        >
+          contact
+        </button>
+        <button
+          onClick={() => {
+            setPage("404");
+          }}
+        >
+          404
+        </button>
+      </div>
 
-          <h1>ini dari Parent</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
-            corporis ipsum corrupti earum libero nostrum quisquam maxime,
-            molestias est, explicabo quam, iusto voluptate delectus eius nam
-            nisi iste fugit laborum.
-          </p>
-        </Container>
-
-        <ConCard />
-      </main>
-    </>
+      <PageSwitcher />
+    </main>
   );
 };
 
