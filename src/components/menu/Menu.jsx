@@ -10,17 +10,18 @@ const Menu = ({ show }) => {
         transform: show ? "translateY(0)" : "translateY(-55vh)",
       }}
     >
-      <NavLink to="/" className="span">
-        home
-      </NavLink>
-      <NavLink to="/about" className="span">
+      <NavLink to="/about" className="span" activeClassName="span_active">
         about
       </NavLink>
-      <NavLink to="/contact" className="span">
+      <NavLink to="/contact" className="span" activeClassName="span_active">
         contact
       </NavLink>
-      <NavLink to="/gallery" className="span">
+      <NavLink to="/gallery" className="span" activeClassName="span_active">
         gallery
+      </NavLink>
+
+      <NavLink to="/home" className="span" activeClassName="span_active">
+        home
       </NavLink>
     </div>
   );

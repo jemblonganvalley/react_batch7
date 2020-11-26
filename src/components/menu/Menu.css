@@ -28,3 +28,7 @@
 .tab_menu .span:hover {
   border-top: 2px solid orange;
 }
+
+.span_active {
+  color: orange;
+}
