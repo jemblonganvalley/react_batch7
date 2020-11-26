@@ -1,0 +1,32 @@
+.navbar {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  padding: 0 10%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: tomato;
+  color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
+
+.brand {
+  font-weight: 200;
+  font-size: 2rem;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.menu {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-transform: uppercase;
+  user-select: none;
+  cursor: pointer;
+}
