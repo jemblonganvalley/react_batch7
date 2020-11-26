@@ -14,7 +14,7 @@
   transition-duration: 0.5s;
 }
 
-.tab_menu span {
+.tab_menu .span {
   text-transform: uppercase;
   cursor: pointer;
   transition-duration: 0.5s;
@@ -25,6 +25,6 @@
   padding: 0 20px;
 }
 
-.tab_menu span:hover {
+.tab_menu .span:hover {
   border-top: 2px solid orange;
 }

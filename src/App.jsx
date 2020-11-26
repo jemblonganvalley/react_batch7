@@ -1,59 +1,40 @@
 import "./App.css";
-import React, { useState } from "react";
-import Home from "./components/pages/home/Home";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+//BROWSERROUTER
+// adalah sebuah wrapper dimana semua kegiatan perpindahan ROute dilakukan di dalamnya..
 
-//KELAS MALAM
+//Switch
+//adalah sebuah wrapper dimana Route Berada, dan tempat view perpindahan pagenya..
+
+//Route
+//adalah Path URL dari website kita, dan menjadi tempat componennt page berada
+
 const App = () => {
-  const [page, setPage] = useState("about");
-
-  const PageSwitcher = () => {
-    switch (page) {
-      case "home":
-        return <Home />;
-      case "about":
-        return <h1>INI ABOUT</h1>;
-      case "contact":
-        return <h1>INI CONTACT</h1>;
-      default:
-        return <h1>404 not found</h1>;
-    }
-  };
-
   return (
-    <main className="App" style={{ marginTop: "10vh" }}>
-      <div className="menu">
-        <button
-          onClick={() => {
-            setPage("home");
-          }}
-        >
-          home
-        </button>
-        <button
-          onClick={() => {
-            setPage("about");
-          }}
-        >
-          about
-        </button>
-        <button
-          onClick={() => {
-            setPage("contact");
-          }}
-        >
-          contact
-        </button>
-        <button
-          onClick={() => {
-            setPage("404");
-          }}
-        >
-          404
-        </button>
-      </div>
+    <BrowserRouter>
+      <Navbar />
 
-      <PageSwitcher />
-    </main>
+      <main className="App" style={{ marginTop: "10vh" }}>
+        <Switch>
+          <Route path="/gallery">
+            <h1>Ini Page gallery</h1>
+          </Route>
+
+          <Route path="/contact">
+            <h1>Ini Page contact</h1>
+          </Route>
+
+          <Route path="/about">
+            <h1>Ini Page about</h1>
+          </Route>
+
+          <Route path="/">
+            <h1>Ini Page Home</h1>
+          </Route>
+        </Switch>
+      </main>
+    </BrowserRouter>
   );
 };
 
