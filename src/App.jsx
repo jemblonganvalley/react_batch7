@@ -1,35 +1,30 @@
-import "./App.css";
-import React from "react";
-import Container from "./components/container/Container";
-import ConCard from "./components/containerCard/ConCard";
+//component adalah sebuah function
+//yang akan me Return Code JSX
+// Component pada react pemakaiannya layaknya seperti Element/Tag HTML
+
+//syarat pambuatan component
+// 1. Nama File, Variable Harus Huruf Besar
+// 2. Bisa berupa file JS atau JSX
+// 3. Karena akan di import maka harus ada proses export
+// 4. Proses return hanya untuk satu enclosing tag
+
 import Navbar from "./components/navbar/Navbar";
+import Hero from "./components/section/hero/Hero";
+import About from "./components/section/pages/about/About";
+import Contact from "./components/section/pages/contact/Contact";
+import Home from "./components/section/pages/home/Home";
+import Gallery from "./components/section/pages/gallery/Gallery";
 
 const App = () => {
   return (
-    <>
+    <div className="App">
       <Navbar />
-
-      <main className="App" style={{ marginTop: "10vh" }}>
-        <Container
-          title="Title Satu"
-          body="ini adalah isi container satu"
-          // bgImage="https://picsum.photos/seed/150/600"
-          bgColor="yellow"
-        >
-          <img src="https://picsum.photos/seed/13/200" alt="" />
-
-          <h1>ini dari Parent</h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat
-            corporis ipsum corrupti earum libero nostrum quisquam maxime,
-            molestias est, explicabo quam, iusto voluptate delectus eius nam
-            nisi iste fugit laborum.
-          </p>
-        </Container>
-
-        <ConCard />
-      </main>
-    </>
+      <Hero />
+      <Home />
+      <About />
+      <Contact />
+      <Gallery />
+    </div>
   );
 };
 

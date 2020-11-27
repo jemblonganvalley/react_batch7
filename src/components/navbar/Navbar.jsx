@@ -1,42 +1,20 @@
-import { useState } from "react";
-import Menu from "../menu/Menu";
-import Modal from "../modal/Modal";
+// 1 kita bisa langsung import css ke component
 import "./Navbar.css";
 
+// 2 Kita buat function untuk mereturn components kita
 const Navbar = () => {
-  //STATE SHOW
-  const [show, setShow] = useState(false);
-  const [tabMenu, setTabMenu] = useState(false);
-
   return (
-    <>
-      {/* TERNARY OPERATION */}
-      {show ? <Modal /> : null}
-
-      <Menu show={tabMenu} />
-
-      <nav className="navbar">
-        <h3 className="brand">JVALLEY</h3>
-        <span
-          className="material-icons menu"
-          onClick={() => {
-            setShow(!show);
-          }}
-        >
-          menu
-        </span>
-
-        <span
-          className="material-icons arrow"
-          onClick={() => {
-            setTabMenu(!tabMenu);
-          }}
-        >
-          keyboard_arrow_down
-        </span>
-      </nav>
-    </>
+    <nav className="navbar">
+      <h3 className="brand">Andi Maulana</h3>
+      <div className="menu">
+        <span>home</span>
+        <span>about</span>
+        <span>contact</span>
+        <span>gallery</span>
+      </div>
+    </nav>
   );
 };
 
+//3 Kita harus export agar bisa di import di komponent lain
 export default Navbar;

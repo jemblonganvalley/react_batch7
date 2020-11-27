@@ -1,25 +1,36 @@
 .navbar {
   width: 100vw;
   height: 10vh;
-  padding: 0 10%;
   display: flex;
+  padding: 0 10%;
   justify-content: flex-start;
   align-items: center;
-  background-color: black;
-  color: whitesmoke;
-  position: fixed;
+  background-color: tomato;
+  color: white;
+  position: sticky;
   top: 0;
   left: 0;
-  z-index: 150;
+  z-index: 500;
+}
+
+.brand {
+  font-weight: 200;
+  font-size: 2rem;
+  text-transform: uppercase;
+  user-select: none;
 }
 
 .menu {
   margin-left: auto;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-transform: uppercase;
   user-select: none;
+  cursor: pointer;
 }
 
-.arrow {
-  cursor: pointer;
-  user-select: none;
+.menu span:hover {
+  color: aqua;
 }

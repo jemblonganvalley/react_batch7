@@ -1,0 +1,14 @@
+.home {
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+}
+
+.home h1 {
+  font-weight: 900;
+  color: white;
+}
