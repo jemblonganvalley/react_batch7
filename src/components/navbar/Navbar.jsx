@@ -4,6 +4,7 @@ import "./Navbar.css";
 
 // 2 Kita buat function untuk mereturn components kita
 const Navbar = () => {
+  //membua state unutk manipulasi component
   const [showMenu, setShowMenu] = useState(false);
 
   return (
@@ -23,13 +24,19 @@ const Navbar = () => {
 
         {/* {showMenu === true ? <Menu show={showMenu} /> : null} */}
       </nav>
-      <Menu show={showMenu} />
+
+      <Menu
+        show={showMenu}
+        pullUp={() => {
+          setShowMenu(false);
+        }}
+      />
     </>
   );
 };
 
 //membuat component menu..
-const Menu = ({ show }) => {
+const Menu = ({ show, pullUp }) => {
   return (
     <div
       className="menu"
@@ -37,10 +44,38 @@ const Menu = ({ show }) => {
         animationName: show ? "down" : "up",
       }}
     >
-      <span>home</span>
-      <span>about</span>
-      <span>contact</span>
-      <span>gallery</span>
+      <a
+        href="#home"
+        onClick={() => {
+          pullUp();
+        }}
+      >
+        home
+      </a>
+      <a
+        href="#about"
+        onClick={() => {
+          pullUp();
+        }}
+      >
+        about
+      </a>
+      <a
+        href="#contact"
+        onClick={() => {
+          pullUp();
+        }}
+      >
+        contact
+      </a>
+      <a
+        href="#gallery"
+        onClick={() => {
+          pullUp();
+        }}
+      >
+        gallery
+      </a>
     </div>
   );
 };

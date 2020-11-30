@@ -39,10 +39,10 @@
   animation-fill-mode: forwards;
   transition-duration: 0.5s;
   animation-duration: 0.5s;
-  z-index: 100;
+  z-index: 200;
 }
 
-.menu span:hover {
+.menu a:hover {
   color: black;
 }
 
@@ -60,7 +60,7 @@
 
 @keyframes down {
   from {
-    transform: translateY(-27vh);
+    transform: translateY(-25vh);
   }
   to {
     transform: translateY(10vh);
@@ -72,6 +72,6 @@
     transform: translateY(10vh);
   }
   to {
-    transform: translateY(-27vh);
+    transform: translateY(-25vh);
   }
 }

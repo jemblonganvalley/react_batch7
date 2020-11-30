@@ -11,7 +11,7 @@ const Home = () => {
   const [homeData, setHomeData] = useState("Fadliselaz");
 
   return (
-    <section className="home">
+    <section className="home" id="home">
       <h1>Home Page</h1>
       <h3>Selamat datang {homeData} </h3>
 

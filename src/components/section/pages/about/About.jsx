@@ -4,7 +4,7 @@ import "./About.css";
 //2 buat component Home
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h1>About Page</h1>
     </section>
   );
