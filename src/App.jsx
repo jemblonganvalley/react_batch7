@@ -5,6 +5,7 @@ import Home from "./components/pages/home/Home";
 import About from "./components/pages/about/About";
 import Contact from "./components/pages/contact/Contact";
 import Gallery from "./components/pages/gallery/Gallery";
+import Footer from "./components/footer/Footer";
 
 //BROWSERROUTER
 // adalah sebuah wrapper dimana semua kegiatan perpindahan ROute dilakukan di dalamnya..
@@ -38,6 +39,7 @@ const App = () => {
           </Route>
         </Switch>
       </main>
+      <Footer />
     </BrowserRouter>
   );
 };

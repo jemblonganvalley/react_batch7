@@ -32,3 +32,10 @@
 .span_active {
   color: orange;
 }
+
+@media only screen and (max-width: 500px) {
+  .tab_menu {
+    width: 40vw;
+    right: 0;
+  }
+}

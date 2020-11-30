@@ -1,0 +1,64 @@
+.footer {
+  width: 100vw;
+  height: auto;
+  padding: 40px 10%;
+  display: flex;
+  gap: 40px;
+  background-color: black;
+  color: white;
+  justify-content: space-between;
+}
+
+.footer_left_socmed {
+  display: flex;
+  gap: 20px;
+}
+
+.footer_left_socmed span i {
+  margin-right: 5px;
+}
+
+.footer_right_sitemap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.footer_right_sitemap a:hover {
+  color: orange;
+}
+
+.form_group {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+.form_group input {
+  height: 30;
+  padding: 8px;
+  border: none;
+  flex: 1.5;
+  outline: none;
+}
+
+.form_group button {
+  outline: none;
+  border: none;
+  background-color: orange;
+  color: black;
+  flex: 1;
+}
+
+.form_group button:hover {
+  background-color: gray;
+  color: white;
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 500px) {
+  .footer {
+    flex-direction: column;
+  }
+}
