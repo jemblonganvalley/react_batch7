@@ -1,5 +1,6 @@
 // 1 kita bisa langsung import css ke component
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 // 2 Kita buat function untuk mereturn components kita
@@ -44,38 +45,41 @@ const Menu = ({ show, pullUp }) => {
         animationName: show ? "down" : "up",
       }}
     >
-      <a
-        href="#home"
+      <NavLink
+        to="/home"
         onClick={() => {
           pullUp();
         }}
       >
         home
-      </a>
-      <a
-        href="#about"
+      </NavLink>
+
+      <NavLink
+        to="/about"
         onClick={() => {
           pullUp();
         }}
       >
         about
-      </a>
-      <a
-        href="#contact"
+      </NavLink>
+
+      <NavLink
+        to="/contact"
         onClick={() => {
           pullUp();
         }}
       >
         contact
-      </a>
-      <a
-        href="#gallery"
+      </NavLink>
+
+      <NavLink
+        to="/gallery"
         onClick={() => {
           pullUp();
         }}
       >
         gallery
-      </a>
+      </NavLink>
     </div>
   );
 };

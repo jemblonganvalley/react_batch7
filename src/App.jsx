@@ -8,23 +8,45 @@
 // 3. Karena akan di import maka harus ada proses export
 // 4. Proses return hanya untuk satu enclosing tag
 
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
-import Hero from "./components/section/hero/Hero";
+import Home from "./components/section/pages/home/Home";
 import About from "./components/section/pages/about/About";
 import Contact from "./components/section/pages/contact/Contact";
-import Home from "./components/section/pages/home/Home";
 import Gallery from "./components/section/pages/gallery/Gallery";
+import Hero from "./components/section/hero/Hero";
 
 const App = () => {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Home />
-      <About />
-      <Contact />
-      <Gallery />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        {/* SWITCER PAGE AREA */}
+        <Switch>
+          <Route path="/gallery">
+            <Gallery />
+          </Route>
+
+          <Route path="/contact">
+            <Contact />
+          </Route>
+
+          <Route path="/about">
+            <About />
+          </Route>
+
+          <Route path="/home">
+            <Hero />
+            <Home />
+          </Route>
+
+          <Route path="/">
+            <Hero />
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 };
 
