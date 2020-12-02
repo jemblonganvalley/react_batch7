@@ -60,7 +60,7 @@
 
 @keyframes down {
   from {
-    transform: translateY(-25vh);
+    transform: translateY(-35vh);
   }
   to {
     transform: translateY(10vh);
@@ -72,6 +72,35 @@
     transform: translateY(10vh);
   }
   to {
-    transform: translateY(-25vh);
+    transform: translateY(-35vh);
+  }
+}
+
+.group_icon {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .brand {
+    display: none;
+  }
+
+  .navbar {
+    top: 90vh;
+    left: 0px;
+    position: fixed;
+    background-color: black;
+  }
+
+  .menu_icon {
+    display: none;
+  }
+
+  .group_icon {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
 }

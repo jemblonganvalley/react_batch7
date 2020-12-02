@@ -21,9 +21,23 @@ const Navbar = () => {
           menu
         </i>
 
-        {/* CONDITIONAL RENDERING dengan TERNARY OPERATION*/}
+        <div className="group_icon">
+          <NavLink to="/home">
+            <i className="material-icons">home</i>
+          </NavLink>
 
-        {/* {showMenu === true ? <Menu show={showMenu} /> : null} */}
+          <NavLink to="/about">
+            <i className="material-icons">settings</i>
+          </NavLink>
+
+          <NavLink to="/contact">
+            <i className="material-icons">phone</i>
+          </NavLink>
+
+          <NavLink to="/gallery">
+            <i className="material-icons">image</i>
+          </NavLink>
+        </div>
       </nav>
 
       <Menu
