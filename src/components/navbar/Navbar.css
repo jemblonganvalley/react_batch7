@@ -13,6 +13,11 @@
   z-index: 150;
 }
 
+.brand {
+  font-size: 2.2rem;
+  font-weight: 200;
+}
+
 .menu {
   margin-left: auto;
   cursor: pointer;
