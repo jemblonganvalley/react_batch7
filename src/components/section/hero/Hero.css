@@ -36,3 +36,11 @@
   left: 0;
   z-index: 100;
 }
+
+/* RESPONSIVE KE SMART PHONE */
+@media only screen and (max-width: 500px) {
+  .hero h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+}

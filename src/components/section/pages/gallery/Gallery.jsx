@@ -4,7 +4,7 @@ import "./Gallery.css";
 //2 buat component Gallery
 const Gallery = () => {
   return (
-    <section className="gallery">
+    <section className="gallery" id="gallery">
       <h1>Gallery Page</h1>
     </section>
   );

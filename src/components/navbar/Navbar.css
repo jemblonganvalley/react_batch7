@@ -10,7 +10,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 500;
+  z-index: 1000;
 }
 
 .brand {
@@ -21,16 +21,86 @@
 }
 
 .menu {
-  margin-left: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-items: flex-end;
+  gap: 40px;
   text-transform: uppercase;
   user-select: none;
   cursor: pointer;
+  padding: 20px;
+  background-color: ghostwhite;
+  color: tomato;
+  position: fixed;
+  top: 0;
+  right: 10vw;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  animation-fill-mode: forwards;
+  transition-duration: 0.5s;
+  animation-duration: 0.5s;
+  z-index: 200;
 }
 
-.menu span:hover {
-  color: aqua;
+.menu a:hover {
+  color: black;
+}
+
+.menu_icon {
+  margin-left: auto;
+  font-size: 2rem;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  user-select: none;
+}
+
+.menu_icon:hover {
+  color: cyan;
+}
+
+@keyframes down {
+  from {
+    transform: translateY(-35vh);
+  }
+  to {
+    transform: translateY(10vh);
+  }
+}
+
+@keyframes up {
+  from {
+    transform: translateY(10vh);
+  }
+  to {
+    transform: translateY(-35vh);
+  }
+}
+
+.group_icon {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .brand {
+    display: none;
+  }
+
+  .navbar {
+    top: 90vh;
+    left: 0px;
+    position: fixed;
+    background-color: black;
+  }
+
+  .menu_icon {
+    display: none;
+  }
+
+  .group_icon {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
