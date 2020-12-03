@@ -6,6 +6,7 @@ import About from "./components/pages/about/About";
 import Contact from "./components/pages/contact/Contact";
 import Gallery from "./components/pages/gallery/Gallery";
 import Footer from "./components/footer/Footer";
+import BottomMenu from "./components/bottomMenu/BottomMenu";
 
 //BROWSERROUTER
 // adalah sebuah wrapper dimana semua kegiatan perpindahan ROute dilakukan di dalamnya..
@@ -20,7 +21,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
-      <main className="App" style={{ marginTop: "10vh" }}>
+      <BottomMenu />
+      <main className="App" style={{ marginTop: "8vh" }}>
         <Switch>
           <Route path="/gallery">
             <Gallery />

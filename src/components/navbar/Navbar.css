@@ -28,3 +28,21 @@
   cursor: pointer;
   user-select: none;
 }
+
+@media only screen and (max-width: 500px) {
+  .navbar {
+    height: 8vh;
+  }
+
+  .brand {
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .arrow {
+    display: none;
+  }
+}
