@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <h3 className="brand">Andi Maulana</h3>
+        <h3 className="brand">jvalley</h3>
         <i
           className="material-icons menu_icon"
           onClick={() => {

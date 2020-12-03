@@ -13,3 +13,29 @@
   font-weight: 900;
   color: white;
 }
+
+table {
+  background-color: ghostwhite;
+  margin: 40px 8%;
+  padding: 20px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+table thead {
+  background-color: orangered;
+  color: white;
+}
+
+table thead tr th {
+  padding: 8px;
+  border-radius: 8px;
+}
+
+td {
+  padding: 10px;
+}
+
+td:nth-child(1) {
+  text-align: center;
+}
