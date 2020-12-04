@@ -1,0 +1,12 @@
+###
+GET https://a796badd1fb8.ngrok.io/contact
+Content-Type: application/json
+
+###
+POST https://a796badd1fb8.ngrok.io/contact
+Content-Type: application/json
+
+{
+    "from": "uta",
+    "message": "cepot bau"
+}

@@ -3,12 +3,38 @@
   height: auto;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   background-color: lightgoldenrodyellow;
+  padding: 40px 10%;
 }
 
 .contact h1 {
   font-weight: 900;
   color: tomato;
+}
+
+.message_area {
+  width: 100vw;
+  height: auto;
+  padding: 40px 8%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.card {
+  padding: 10px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  background-color: ghostwhite;
+  width: calc(90% / 3);
+}
+
+@media only screen and (max-width: 500px) {
+  .card {
+    width: 100%;
+  }
 }
