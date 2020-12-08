@@ -8,7 +8,7 @@ const Contact = () => {
   useEffect(() => {
     //function di dalam sini akan berjalan sebelum component terload
     // fetch('endpoint', {config})
-    fetch("https://84ea70cf4e76.ngrok.io/contact", {
+    fetch("https://4c90e7edd2db.ngrok.io/contact", {
       method: "GET",
       mode: "cors",
       headers: {
